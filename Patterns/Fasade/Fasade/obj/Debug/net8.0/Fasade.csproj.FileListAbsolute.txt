@@ -1,0 +1,14 @@
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\bin\Debug\net8.0\Fasade.exe
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\bin\Debug\net8.0\Fasade.deps.json
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\bin\Debug\net8.0\Fasade.runtimeconfig.json
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\bin\Debug\net8.0\Fasade.dll
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\bin\Debug\net8.0\Fasade.pdb
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\obj\Debug\net8.0\Fasade.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\obj\Debug\net8.0\Fasade.AssemblyInfoInputs.cache
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\obj\Debug\net8.0\Fasade.AssemblyInfo.cs
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\obj\Debug\net8.0\Fasade.csproj.CoreCompileInputs.cache
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\obj\Debug\net8.0\Fasade.dll
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\obj\Debug\net8.0\refint\Fasade.dll
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\obj\Debug\net8.0\Fasade.pdb
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\obj\Debug\net8.0\Fasade.genruntimeconfig.cache
+C:\Users\Efi\Desktop\Desktop\Patterns\Fasade\Fasade\obj\Debug\net8.0\ref\Fasade.dll
