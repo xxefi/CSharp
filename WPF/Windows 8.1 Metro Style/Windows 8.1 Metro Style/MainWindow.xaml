@@ -1,0 +1,78 @@
+﻿<Window x:Class="WindowsMetroStyle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Windows Metro Style" Height="768" Width="1024">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="https://1.bp.blogspot.com/-lAzan4IEhJY/UhyozDUySKI/AAAAAAAAETQ/idv6Y9UQg7w/s1600/Official-Windows-8-1-RTM-Wallpaper.jpg"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="269*"/>
+            <ColumnDefinition Width="269*"/>
+            <ColumnDefinition Width="269*"/>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="198*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" Width="100" Height="100" Margin="80,51,112,0" Background="DodgerBlue">
+            <Image x:Name="Internet_Explorer" Source="https://cdn.icon-icons.com/icons2/17/PNG/256/application_software_internet_browser_explorer_ie_internetexplorer_1834.png" Width="100" Height="100" />
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="0" Width="100" Height="100" Margin="182,51,10,0" Background="DeepSkyBlue">
+            <Image x:Name="Store" Source="https://cdn.icon-icons.com/icons2/1488/PNG/512/5340-windows-store_102519.png" Width="100" Height="100" />
+        </Button>
+        <Button Grid.Row="3" Width="100" Margin="183,1.2,11,-4" Background="YellowGreen">
+            <Image x:Name="Explorer" Source="https://cdn.icon-icons.com/icons2/195/PNG/256/File_Explorer_23583.png" Width="50" Height="50" Margin="0, 0, 0, 0" />
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="0" Width="100" Height="100" Margin="81,1,113,-4" Background="MediumBlue">
+            <Image x:Name="Settings" Source="https://articles-images.sftcdn.net/wp-content/uploads/sites/3/2012/09/settings-icon.png" Width="100" Height="100" />
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="0" Height="100" Margin="80,98,12,-108" Background="CadetBlue">
+            <Image x:Name="Desktop" Source="https://w.forfun.com/fetch/1c/1c714c151c241302d56a1e3568217544.jpeg" Width="198" Height="120" />
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="0" Width="100" Height="100" Margin="80,202,114,-207" Background="IndianRed">
+            <Image x:Name="Instagram" Source="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" Width="65" Height="65" />
+        </Button>
+
+
+        <Button Grid.Row="3" Grid.Column="0" Width="100" Height="100" Margin="182,203,12,-206" Background="LightBlue">
+            <Image x:Name="Facebook" Source="https://cdn-icons-png.flaticon.com/512/733/733547.png" Width="65" Height="65" />
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="0" Width="100" Height="100" Margin="80,305,114,-308" Background="SkyBlue">
+            <Image x:Name="Twitter" Source="https://cdn-icons-png.flaticon.com/512/1409/1409937.png" Width="65" Height="65" />
+        </Button>
+
+
+        <Button Grid.Row="3" Grid.Column="0" Width="100" Height="100" Margin="182,305,12,-308" Background="White">
+            <Image x:Name="YouTube" Source="https://cdn-icons-png.flaticon.com/512/5968/5968852.png" Width="65" Height="65" />
+        </Button>
+
+
+        <Image Grid.Row="0" Grid.Column="8" Height="50" Margin="39,51,15,50" Source="https://images.ctfassets.net/o7gbawqaod8w/39PNpLWfZ2tLM6Wq8D9ENA/588a601cb79016592fa75eebe159f674/Screenshot_2022-11-30_at_06.49.05.png" />
+        <TextBlock Text="Admin" HorizontalAlignment="Left" Grid.Column="7" Margin="44,66,0,64" FontSize="16" Foreground="White" Grid.ColumnSpan="2">
+            <TextBlock.Effect>
+                <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="5.5"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,44 @@
+﻿<Window x:Class="TextDocument.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextDocument"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="Блокнот" Height="569" Width="989">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="Файл" Height="21">
+                <MenuItem Header="Открыть" Command="{Binding OpenCommand}" />
+                <MenuItem Header="Сохранить" Command="{Binding SaveCommand}"/>
+                <MenuItem Header="Сохранить как" Command="{Binding SaveToCommand}"/>
+                <MenuItem Header="Выйти" Command="{Binding ExitCommand}"/>
+            </MenuItem>
+            <MenuItem Header="Правка">
+                <MenuItem Header="Вырезать" Command="{Binding CutCommand}"/>
+                <MenuItem Header="Копировать" Command="{Binding CopyCommand}"/>
+                <MenuItem Header="Вставить" Command="{Binding PasteCommand}"/>
+                <MenuItem Header="Удалить" Command="{Binding DeleteCommand}"/>
+            </MenuItem>
+
+            <MenuItem Header="Справка">
+                <MenuItem Header="О Программе"/>
+            </MenuItem>
+        </Menu>
+
+        <TextBox
+            x:Name="Text"
+            Text="{Binding Note}"
+            HorizontalAlignment="Center" Width="972"
+            FontSize="25"
+            Height="533" VerticalAlignment="Top" Margin="0,21,0,0"/>
+    </Grid>
+</Window>
