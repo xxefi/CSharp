@@ -1,0 +1,14 @@
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\bin\Debug\net8.0\ComputerBuilder.exe
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\bin\Debug\net8.0\ComputerBuilder.deps.json
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\bin\Debug\net8.0\ComputerBuilder.runtimeconfig.json
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\bin\Debug\net8.0\ComputerBuilder.dll
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\bin\Debug\net8.0\ComputerBuilder.pdb
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\obj\Debug\net8.0\ComputerBuilder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\obj\Debug\net8.0\ComputerBuilder.AssemblyInfoInputs.cache
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\obj\Debug\net8.0\ComputerBuilder.AssemblyInfo.cs
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\obj\Debug\net8.0\ComputerBuilder.csproj.CoreCompileInputs.cache
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\obj\Debug\net8.0\ComputerBuilder.dll
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\obj\Debug\net8.0\refint\ComputerBuilder.dll
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\obj\Debug\net8.0\ComputerBuilder.pdb
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\obj\Debug\net8.0\ComputerBuilder.genruntimeconfig.cache
+C:\Users\Efi\Desktop\Desktop\Patterns\ComputerBuilder\ComputerBuilder\obj\Debug\net8.0\ref\ComputerBuilder.dll
