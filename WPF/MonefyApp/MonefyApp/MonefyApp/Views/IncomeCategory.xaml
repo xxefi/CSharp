@@ -1,0 +1,85 @@
+﻿<Window x:Class="MonefyApp.Views.IncomeCategory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MonefyApp.Views" xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="Категория Доходов" Height="371" Width="489">
+
+
+    <Grid Margin="0,0,0,7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="93*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="95*"/>
+        </Grid.RowDefinitions>
+        <TabPanel
+    Visibility="Visible" Grid.RowSpan="4" Margin="-2,-1,-1,23"/>
+        <Button Content="Депозит"
+                FontSize="25"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Background="#4ba27a"
+                    x:Name="Deposit"
+                    Command="{Binding AddCategorie}"
+                    CommandParameter="{Binding ElementName=Deposit}" Height="56" Width="452" Margin="0,101,0,0" Grid.Row="1" Grid.RowSpan="2"/>
+        <Button
+                Content="Сбережения"
+            FontSize="25"
+                        Background="#d0768f"
+                        x:Name="Savings"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+            Command="{Binding AddCategorie}"
+                CommandParameter="{Binding ElementName=Savings}" Height="56" Width="452" RenderTransformOrigin="0.5,0.5" Margin="0,58,0,0" Grid.Row="2" Grid.RowSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.228"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.279"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Зарплата"
+                FontSize="25"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Background="#4ba17a"
+            x:Name="Salary"
+                Command="{Binding AddCategorie}"
+            CommandParameter="{Binding ElementName=Salary}" Height="56" Width="452" Grid.Row="1" Margin="0,37,0,0"/>
+
+        <md:PackIcon Kind="AttachMoney" Width="46" Height="51"
+        Background="#4ba17a"
+        Foreground="White" Grid.Row="1" Margin="407,39,0,0"/>
+        <md:PackIcon Kind="Money" Width="46" Height="52"
+            Background="#4ba17a"
+            Foreground="White" Grid.Row="1" Margin="408,103,0,0" Grid.RowSpan="2"/>
+        <md:PackIcon Kind="BatterySaver" Width="41" Height="49"
+            Background="#d0768f"
+            Foreground="White" Grid.Row="2" Margin="24,62,0,0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+            <md:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.623" AngleY="-0.01"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.239" Y="-0.003"/>
+                </TransformGroup>
+            </md:PackIcon.RenderTransform>
+        </md:PackIcon>
+
+        <md:PackIcon Kind="AttachMoney" Width="44" Height="50"
+        Background="#4ba17a"
+        Foreground="White" Grid.Row="1" Margin="22,40,0,0"/>
+        <md:PackIcon Kind="Money" Width="45" Height="52"
+        Background="#4ba17a"
+        Foreground="White" Grid.Row="1" Margin="22,103,0,0" Grid.RowSpan="2"/>
+        <md:PackIcon Kind="BatterySaver" Width="46" Height="48"
+        Background="#d0768f"
+        Foreground="White" Grid.Row="2" Margin="409,62,0,0" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
