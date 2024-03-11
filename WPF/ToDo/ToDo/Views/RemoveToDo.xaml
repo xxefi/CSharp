@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="ToDo.Views.RemoveToDo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ToDo.Views"
+             xmlns:viewModel="clr-namespace:ToDo.ViewModel"
+             mc:Ignorable="d" 
+             Background="White"
+             d:DataContext="{d:DesignInstance Type=viewModel:RemoveToDoViewModel}"
+             d:DesignHeight="660" d:DesignWidth="365">
+    <Grid>
+        <TextBlock
+            Text="Выберите дело для удаления"
+            FontWeight="Bold"
+            FontSize="20" Margin="22,58,21,569"/>
+
+        <ListBox
+             ItemsSource="{Binding Todo}"
+             SelectedItem="{Binding SelectedTodo}"
+             SelectionMode="Single"
+             FontSize="20" Margin="0,91,0,101">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <StackPanel 
+                        Grid.Row="1">
+                            <Label Content="Имя: "/>
+                            <Label Content="Дело: "/>
+                            <Label Content="Описания: "/>
+                            <Label Content="Дата: "/>
+                        </StackPanel>
+                        <StackPanel
+                        Grid.Row="1">
+                            <Label Content="{Binding Name}"/>
+                            <Label Content="{Binding Type}"/>
+                            <Label Content="{Binding Description}"/>
+                            <Label Content="{Binding Time}"/>
+
+                        </StackPanel>
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button
+            Command="{Binding Back}"
+            Content="Назад"
+            Background="Red"
+            BorderBrush="Red"
+            Margin="268,523,10,4"/>
+
+        <Button
+        Command="{Binding Remove}"
+        Content="Удалить"
+        Background="Red"
+        BorderBrush="Red"
+        Margin="139,574,123,54"/>
+    </Grid>
+</UserControl>
