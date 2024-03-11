@@ -7,15 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AddToDo.xaml.cs">
+    <Compile Update="Views\AddToDo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MainView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RemoveToDo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AddToDo.xaml">
+    <Page Update="Views\AddToDo.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Views\MainView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RemoveToDo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ToDoView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
