@@ -65,8 +65,8 @@
                                         <Run Text="{Binding main.temp}"/>
                                         <Run Text="°C"/>
                                     </TextBlock>
-                                    <Label Content="{Binding main.humidity}"/>
                                     <Label Content="{Binding main.pressure}"/>
+                                    <Label Content="{Binding main.humidity}"/>
                                     <TextBlock>
                                          <Run Text="{Binding wind.speed}"/>
                                          <Run Text="Km/s"/>
