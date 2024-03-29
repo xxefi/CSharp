@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="CityAPI.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:CityAPI"
+        Background="Aqua"
+        xmlns:viewModel="clr-namespace:CityAPI.ViewModels"
+        d:DataContext="{d:DesignInstance Type=viewModel:MainViewModel}"
+        mc:Ignorable="d" Height="600" Width="800">
+    <Grid Background="Transparent">
+        <Border CornerRadius="30" Background="Transparent">
+            <Grid>
+                <TextBox
+                    TextAlignment="Center"
+                    FontFamily="SF UI Display Normal"
+                    md:TextFieldAssist.UnderlineBrush="Black"
+                    Foreground="Black"
+                    FontSize="26"
+                    SelectionTextBrush="Black"
+                    SelectionBrush="Black"
+                    Text="{Binding SearchBox, UpdateSourceTrigger=PropertyChanged}"
+                    DockPanel.Dock="Left" Margin="10,38,139,502">
+                    <md:HintAssist.Hint>
+                        <TextBlock 
+                            FontSize="26"
+                            TextAlignment="Center"
+                            Text="🔍 Введите город..."
+                            FontFamily="SF UI Display Normal"/>
+                    </md:HintAssist.Hint>
+                </TextBox>
+
+                <Button
+                    Command="{Binding Search}"
+                    Content="Поиск"
+                    FontFamily="SF UI Display Normal"
+                    BorderBrush="Black"
+                    Background="Black"
+                    Foreground="White"
+                    md:ButtonAssist.CornerRadius="5" Margin="666,52,18,516"
+                    Style="{StaticResource MaterialDesignPaperDarkButton}"/>
+
+                <ListBox
+                    ItemsSource="{Binding WeatherInfo}"
+                    SelectionMode="Single"
+                    FontSize="17"
+                    FontFamily="SF UI Display Normal"
+                    Height="455" Margin="10,116,504,29">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <DockPanel>
+                                <StackPanel 
+                                    Grid.Row="1">
+                                    <Label Content="Город: "/>
+                                    <Label Content="Температура: "/>
+                                    <Label Content="Давление: "/>
+                                    <Label Content="Влажность: "/>
+                                    <Label Content="Скорость ветра: "/>
+                                </StackPanel>
+                                <StackPanel
+                                    Grid.Row="1">
+                                    <Label Content="{Binding name}"/>
+                                    <TextBlock>
+                                        <Run Text="{Binding main.temp}"/>
+                                        <Run Text="°C"/>
+                                    </TextBlock>
+                                    <Label Content="{Binding main.humidity}"/>
+                                    <Label Content="{Binding main.pressure}"/>
+                                    <TextBlock>
+                                         <Run Text="{Binding wind.speed}"/>
+                                         <Run Text="Km/s"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </DockPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+
+                <ListBox
+                    ItemsSource="{Binding CountryInfo}"
+                    SelectionMode="Single"
+                    FontSize="17"
+                    FontFamily="SF UI Display Normal"
+                    Height="455" Margin="432,116,10,29">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <DockPanel>
+                                <Image Source="{Binding flags.png}" Width="100" Height="100" Margin="0"/>
+                                <StackPanel 
+                                    Grid.Row="1">
+                                    <Label Content="Страна: "/>
+                                    <Label Content="Регион: "/>
+                                    <Label Content="Город: "/>
+                                </StackPanel>
+                                <StackPanel
+                                    Grid.Row="1">
+                                    <Label Content="{Binding name.common}"/>
+                                    <Label Content="{Binding region}"/>
+                                    <Label Content="{Binding capital[0]}"/>
+
+
+                                </StackPanel>
+                            </DockPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
