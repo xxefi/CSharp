@@ -1,4 +1,4 @@
-﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,6 +11,7 @@ using KinoPoiskWork.Models;
 using KinoPoiskWork.Services.Interfaces;
 using KinoPoiskWork.Context;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.Data.SqlClient;
 
 namespace KinoPoiskWork.ViewModel
 {
@@ -20,6 +21,7 @@ namespace KinoPoiskWork.ViewModel
         private readonly MovieDbContext _context;
         private string _searchText;
         private ObservableCollection<MovieModel.Info> _movie;
+        private MovieModel.Info _selectedMovie;
         
         public string SearchText
         {
@@ -33,11 +35,17 @@ namespace KinoPoiskWork.ViewModel
             set => Set(ref _movie, value);
         }
 
+        public MovieModel.Info SelectedMovie
+        {
+            get => _selectedMovie;
+            set => Set(ref _selectedMovie, value);
+        }
+
         public MainViewModel(IDownloadService downloadService, MovieDbContext context)
         {
             _downloadService = downloadService;
             _context = context;
-            
+            Movie = new ObservableCollection<MovieModel.Info>();
         }
 
        
@@ -50,20 +58,6 @@ namespace KinoPoiskWork.ViewModel
                 {
                     await _downloadService.DownloadMovie(SearchText)
                 };
-                
-                MessageBoxResult result = MessageBox.Show("Сохранить результат?", "Уведомление", MessageBoxButton.YesNo);
-                if (result == MessageBoxResult.Yes)
-                {
-                    var movieInfo = await _downloadService.DownloadMovie(SearchText);
-                    var movieModel = new MovieModel
-                    {
-                        info = movieInfo
-                    };
-                    _context.Movies.Add(movieModel);
-                    await _context.SaveChangesAsync();
-                    MessageBox.Show("Успешно сохранено");
-                }
-               
             }
             catch (Exception ex)
             {
@@ -72,5 +66,43 @@ namespace KinoPoiskWork.ViewModel
            
         });
 
+        public RelayCommand SaveMovie
+        {
+            get => new(
+                async () =>
+                {
+                    try
+                    {
+                        var existingMovie = _context.Movies.FirstOrDefault(m => m.info.title == _selectedMovie.title);
+                        if (existingMovie != null)
+                        {
+                            MessageBox.Show("Вы уже сохраняли этот фильм");
+                            return;
+                        }
+                        if (_selectedMovie == null)
+                        {
+                            MessageBox.Show("Выберите фильм");
+                            return;
+                        }
+                        var movie = await _downloadService.DownloadMovie(SearchText);
+                        var model = new MovieModel
+                        {
+                            info = movie
+                        };
+                        _context.Movies.Add(model);
+                        await _context.SaveChangesAsync();
+                        MessageBox.Show("Фильм сохранён");
+                        _selectedMovie = null;
+                    }
+                    catch (SqlException sql)
+                    {
+                        MessageBox.Show($"SQL: {sql.Message}");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                });
+        }
     }
 }
