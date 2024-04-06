@@ -1,0 +1,38 @@
+﻿<Window x:Class="SendUDP.mp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SendUDP.mp3"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Height="313" Width="487">
+    <Grid>
+        <TextBox
+        x:Name="ipadresstext"
+        md:TextFieldAssist.UnderlineBrush="Black"
+        SelectionBrush="Black"
+        SelectionTextBrush="Black"
+        Width="293"
+        Height="50"
+        FontSize="32"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top" Margin="0,10,0,0">
+            <md:HintAssist.Hint>
+                <TextBlock
+                Text="Введите IP-Адрес..."
+                FontSize="22"/>
+            </md:HintAssist.Hint>
+        </TextBox>
+
+        <Button
+        Name="SendButton"
+        Content="Отправить MP3"
+        Width="150"
+        BorderBrush="Black"
+        Background="Black"
+        md:ButtonAssist.CornerRadius="7"
+        HorizontalAlignment="Right"
+        VerticalAlignment="Top"
+        Margin="0,28,10,0" Click="SendButton_Click"/>
+    </Grid>
+</Window>
