@@ -7,7 +7,6 @@ using RestSharp;
 
 #region GetMethod
 
-
 string url = "https://localhost:7117";
 using var client = new RestClient(url);
 
@@ -60,17 +59,11 @@ try
     var response = await client.ExecuteAsync(requestData);
 
     if (response.StatusCode == HttpStatusCode.OK)
-    {
         Console.WriteLine($"Бренд {brandName} успешно удалён.");
-    }
     else if (response.StatusCode == HttpStatusCode.NotFound)
-    {
         Console.WriteLine($"Бренд {brandName} не найдён");
-    }
     else
-    {
         Console.WriteLine($"Ошибка, код: {response.StatusCode}");
-    }
 }
 catch (Exception ex)
 {
