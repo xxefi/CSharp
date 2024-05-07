@@ -17,7 +17,7 @@ var resp = await client.GetAsync(req);
 var data = JsonSerializer.Deserialize<JsonNode>(resp.Content);
 
 Console.WriteLine(data);
-*/
+
 #endregion
 #region PostMethod
 //Если что, программа не сохраняет изменения в базу данных :)
@@ -44,7 +44,6 @@ catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
 }
- */
 
 
 #endregion
