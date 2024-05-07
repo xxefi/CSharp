@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 using RestSharp;
 
 #region GetMethod
-/*
+
 
 string url = "https://localhost:7117";
 using var client = new RestClient(url);
@@ -21,8 +21,8 @@ Console.WriteLine(data);
 #endregion
 #region PostMethod
 //Если что, программа не сохраняет изменения в базу данных :)
-/*
- * string url = "https://localhost:7117";
+
+string url = "https://localhost:7117";
 var client = new RestClient(url);
 
 try
